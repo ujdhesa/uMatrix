@@ -1,0 +1,81 @@
+uMatrix: Një firewall në formë matrice zgjidh-dhe-kliko, me mjaft mjete zgjerimi privatësie.
+
+*Për përdorues të përparuar.*
+
+uMatrix ju vendos në kontroll të plotë mbi ku lejohet të lidhet shfletuesi juaj, ç’lloj të dhënash lejohet të shkarkohen, dhe ç’lejohet të ekzekutohet. Askush tjetër nuk vendos për ju: Ju bëni zgjedhjen. Ju jeni në kontroll të plotë të privatësisë tuaj.
+
+Fill pas instalimi, uMatrix funksionon nën mënyrën relaks blloko-gjithçka/lejo-vetëm-përjashtime, që do të thotë se sajtet që lypin skripte palësh të treta ka gjasa të "mos punojnë". Me dy klikime, uMatrix mund të ujdiset të funksionojë nën mënyrën lejo-gjithçka/bloko-me-raste, e cila përgjithësisht nuk dëmton funksionimin e sajteve. Për më tepër hollësi mbi këtë temë, shihni https://github.com/gorhill/httpswitchboard/wiki/How-to-use-HTTP-Switchboard:-Two-opposing-views.
+
+* Shihni KREJT lidhjet e largëta, të dështuara ose të tentuara, në varësi të faktit se qenë bllokuar ose lejuar (e vendosni ju).
+
+* Një klikim i vetëm për të lejuar/ndaluar një ose shumë klasa kërkesash, sipas vendit ku shpien dhe llojit të të dhënave (një kërkesë e bllokuar nuk do të ikë KURRË prej shfletuesit tuaj).
+
+* Ndalim efikas: cookie-t nuk do të ikin nga shfletuesi juaj, s’do të ketë ekzekutim kodi JavaScript, s’do të ketë luajtje mediash, pikselat gjurmues s’do të shkarkohen, etj.
+
+* Nuk ju duhet të bazoheni vetëm e vetëm në një listë të veçantë ndalimesh të krijuar nga dikush (për të cilën mund të thuhet se i mungojnë mjaft zëra) jashtë së cilës asgjë tjetër s’mund të bllokohet: Jeni ju në kontroll të plotë.
+
+* Lehtësi përdorimi: uMatrix ju lejon të lejoni/ndaloni lehtësisht kërkesa rrjeti që e kanë origjinën prej një faqeje, përmes një matrice zgjidh-dhe-kliko:
+
+- emra përkatësish (shtylla majtas)
+  * nga shumë specifike
+  * në shumë në përgjithësi
+
+- lloj kërkesash (rreshti i epërm)
+  * cookies
+  * css (fletëstile dhe shkronja web)
+  * figura
+  * media
+  * skripte
+  * xhr (kërkesa të bëra nga skripte)
+  * kuadro
+  * të tjera
+
+Me një klikim të vetëm und të ndaloni/lejoni elementin e një kutize të vetme, një rresht të tërë, një grup rreshtash, një shtyllë të tërë, ose krejt matricën.
+
+Mekanizimi i filtrimit në uMatrix përdor logjikën e përparësisë për të vlerësuar ç’bllokohet/lejohet, në varësi se për cilat cila kutiza është përzgjedhur ndalim/lejim. Për shembull, kjo ju lejon të lejoni me një klikim një faqe të tërë, pa u dashur të përsëritni lejim kurdo që te faqja shfaqen të dhëna të reja.
+
+Krejt rregullat zbatohen mbi fokus të caktuar. Për shembull, mund të bllokoni `facebook.com` dhe `facebook.net` kudo, hiq rastin kur vizitoni një faqe në `www.facebook.com`. Kjo është arsyeja pse Facebook-u s’do të jetë në gjendje të krijojë një profil të zakoneve tuaja në shfletim.
+
+Synimi i këtij zgjerimi është ta bëjë lejimin ose ndalimin e e sajteve në shfletues, plotësisht ose të një një pjese, sa më të thjeshtë që mundet, për t’i inkurajuar kështu përdoruesit të kujdesen për privatësinë e tyre.
+
+Zgjerimi vjen me lista strehësh nga palë të treta, që përfshijnë mbi 62000 strehëemra të ndryshëm (listat mund të aktivizohen/çaktivizohen duke i përzgjedhur sipas dëshirës tuaj).
+
+Si përfundim, mund të zgjidhni se si të shfletoni rrjetin:
+
+* Ndaloni gjithçka, si parazgjedhje, dhe lejoni sipas nevojës (mënyra parazgjedhje).
+
+* Lejoni gjithçka, si parazgjedhje, dhe ndaloni sipas nevojës.
+
+Cilado qoftë mënyra, prapë përfitoni nga listat e gatshme të ndalimeve, që kështu të paktën keni një mbrojtje elementare nga gjurmues, sajte malware-i, etj. Ose mund t’i çaktivizoni krejt këto lista të gatshme ndalimesh.
+
+Zgjidheni vetë.
+
+Dokumentim i grumbulluar kuturu: https://github.com/gorhill/uMatrix/wiki
+
+=====
+
+Ky zgjerim është gjithashtu i dobishëm për të kuptuar se ç’bën faqja web në shfletuesin tuaj, shpesh pa dijeninë tuaj. Keni plotësisht mundësinë të shihni dhe vendosni me kë komunikon një faqe web, dhe t’i kufizoni këto komunikime në klasa specifike objektesh brenda një faqeje web.
+
+Numri që duket te ikona e zgjerimit i përgjigjet numrit gjithsej të kërkesave të ndryshme të bllokuara nga zgjerimir.
+
+Thjesht klikoni mbi zërin e duhur te matrica që një përbërës ta lejoni, ndaloni ose ta bëni të trashëgojë gjendjen prej një kutize tjetër, me përparësi më të madhe në matricë.
+
+Kuadrat në të kuqe = efektivisht i ndaluar, d.m.th., kërkesat pengohen të mbërrijnë në vendndodhjen e tyre të synuar:
+* Kuadrat në të kuqe të errët: emri i përkatësisë dhe/ose lloji i kërkesës është ndaluar në mënyrë specifike.
+* Kuadrat në të kuqe të zbehtë: gjendja e ndalimit është trashëguar, ngaqë për zërin është kërkuar ta trashëgojë.
+
+Kuadrat në të gjelbër = efektivisht i lejuar, d.m.th., kërkesat lejohen të mbërrijnë në vendmbërritjen e tyre të synuar:
+* Kuadrat në të gjelbër të errët: emri i përkatësisë dhe/ose lloji i kërkesës është lejuar në mënyrë specifike.
+* Kuadrat në të gjelbër të zbehtë: gjendja e lejimit është trashëguar, ngaqë për zërin është kërkuar ta trashëgojë.
+
+Kutiza e majtë sipër në matricë, kutiza "krejt", përfaqëson rregullimin parazgjedhje global, që ju lejon të zgjidhni nëse lejimi ose bllokimi i gjithçkaje të jetë sjellja parazgjedhje. Disa parapëlqejnë të lejojnë gjithçka, teksa bllokojnë me raste. Parapëlqimi im personal është sigurisht e kundërta, bllokimi i gjithçkaje dhe lejimi me raste.
+
+Ky zgjerim është gjithashtu i dobishëm nëse dëshironi të përshpejtoni shfletimin tuaj, për shembull, duke bllokuar globalisht krejt kërkesat për figura.
+
+=====
+
+TË META, ÇËSHJTE: https://github.com/uBlockOrigin/uMatrix-issues/issues
+
+KOD BURIM: https://github.com/gorhill/uMatrix (GPLv3)
+
+REGJISTËR NDRYSHIMESH: https://github.com/gorhill/uMatrix/releases
