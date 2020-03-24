@@ -177,15 +177,15 @@
         "description": ""
     },
     "statsPageCookieHeadersFoiled" : {
-        "message": "<a href='https://en.wikipedia.org/wiki/HTTP_cookie'>HTTP cookie</a> headers foiled: {{count}}",
+        "message": "Krye <a href='https://en.wikipedia.org/wiki/HTTP_cookie'>cookie HTTP</a> të shmangura: {{count}}",
         "description": ""
     },
     "statsPageRefererHeadersFoiled" : {
-        "message": "<a href='https://en.wikipedia.org/wiki/HTTP_referer'>HTTP referer</a> headers foiled: {{count}}",
+        "message": "Krye <a href='https://en.wikipedia.org/wiki/HTTP_referer'>referuesish HTTP</a> të shmangura: {{count}}",
         "description": ""
     },
     "statsPageHyperlinkAuditingFoiled" : {
-        "message": "<a href='https://html.spec.whatwg.org/multipage/semantics.html#hyperlink-auditing'>Hyperlink auditing</a> attempts foiled: {{count}}",
+        "message": "Përpjekje <a href='https://html.spec.whatwg.org/multipage/semantics.html#hyperlink-auditing'>auditimi tejlidhjesh</a> të shmangura: {{count}}",
         "description": ""
     },
     "statsPageCookiesRemoved" : {
@@ -622,7 +622,7 @@
         "description": ""
     },
     "hostsFilesStats" : {
-        "message": "{{blockedHostnameCount}} distinct blocked hostnames from:",
+        "message": "{{blockedHostnameCount}} strehëemra të ndryshëm të bllokuar nga:",
         "description": ""
     },
     "hostsFilesPerFileStats" : {
